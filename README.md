@@ -19,17 +19,17 @@ this app is based on the [flaskr](https://github.com/mitsuhiko/flask/tree/master
 how to run it
 -------------
 clone repo  
-`cd latersend`
-`virtualenv . --no-site-packages`
-`source bin/activate`
-`pip install -r requirements.txt`
+`cd latersend`  
+`virtualenv . --no-site-packages`  
+`source bin/activate`  
+`pip install -r requirements.txt`  
 
-to run application
-`python latersend.py`
+to run application  
+`python latersend.py`  
 
-to run backend process
-`python latersend_backend.py`
+to run backend process  
+`python latersend_backend.py`  
 
-to access application:
-point your browser to http://127.0.0.1:5000
+to access application:  
+point your browser to http://127.0.0.1:5000  
 
