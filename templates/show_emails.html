@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% from "_formhelpers.html" import render_field %}
+{% block body %}
+  {% if session.logged_in %}
+    <form action="{{ url_for('show_emails') }}" method=post class=add-email>
+      <dl>
+        {{ render_field(form.sender) }}
+        {{ render_field(form.recipient) }}
+        {{ render_field(form.subject) }}
+        {{ render_field(form.message) }}
+        {{ render_field(form.days_ahead) }}
+      </dl>
+      <p><input type=submit value=LaterSend>
+    </form>
+  {% endif %}
+  <ul class=emails>
+  {% for email in emails %}
+    <li><h2>{{ email.id }}</h2>
+    {{ email.sender|safe }}
+    {{ email.recipient|safe }}
+    {{ email.subject|safe }}
+    {{ email.message|safe }}
+    {{ email.entry_date|safe }}
+    {{ email.send_date|safe }}
+    {{ email.sent|safe }}
+  {% else %}
+    <li><em>No emails here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %}

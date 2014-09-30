@@ -1,0 +1,9 @@
+*.pyc
+*.db
+*.backup
+*.swp
+/hide
+/bin
+/lib
+/local
+/include
