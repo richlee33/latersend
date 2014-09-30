@@ -2,7 +2,7 @@ import sqlite3
 import datetime
 
 # configuration
-DATABASE = '/temp/sqlite.db'
+DATABASE = '/tmp/sqlite.db'
 
 def connect_db():
     return sqlite3.connect(DATABASE)
