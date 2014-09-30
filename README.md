@@ -21,24 +21,29 @@ the [flaskr](https://github.com/mitsuhiko/flask/tree/master/examples/flaskr/)
 
 how to run it
 -------------
-clone repo  
+set up environment:  
+`git clone <repo url>`  
 `cd latersend`  
 `virtualenv . --no-site-packages`  
 `source bin/activate`  
 `pip install -r requirements.txt`  
 
-to run application  
+run application:  
 `python latersend.py`  
 
-to run backend process  
+run backend process:  
 `python latersend_backend.py`  
 
-to access application:  
+access application:  
 point your browser to http://127.0.0.1:5000  
 
 
-other setup:
+other setup needed
+------------------
 * put your SendGrid user and key into the env vars
 SENDGRID_USER and SENDGRID_KEY
 * initialize sqlite3 db  
+`python`  
+`> from latersend import init_db`  
+`> init_db()`  
 
