@@ -29,14 +29,3 @@ def update_sent_status(d,i):
     db.close()
     return result
 
-
-#r = todays_emails()
-#print r
-
-#get the current date
-#open a db connection
-#select emails with send_date = current date and sent=0
-#format data into sendgrid API
-#submit data to sendgrid
-#update emails that were sent to sent=1
-#close the db connection
