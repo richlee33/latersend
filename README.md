@@ -1,6 +1,7 @@
 latersend
 ========
-compose an email now and at a later date, send the email.
+compose an email now and at a later date, automatically send the 
+email.
 
 
 how it works
