@@ -36,7 +36,7 @@ run backend process:
 `python latersend_backend.py`  
 
 access application:  
-point your browser to http://127.0.0.1:5000  
+point your browser to https://127.0.0.1:5000  
 
 
 other setup needed
@@ -45,6 +45,12 @@ other setup needed
 SENDGRID_USER and SENDGRID_KEY
 * initialize sqlite3 db  
 `python`  
-`> from latersend import init_db`  
-`> init_db()`  
+`>>> from latersend import init_db`  
+`>>> init_db()`  
+* create development certificate and key to serve on https  
+`python`  
+`>>> from werkzeug import serving`  
+`>>> serving.make_ssl_devcert(base_path='<path>',host='<host_name>')`  
+
+
 
