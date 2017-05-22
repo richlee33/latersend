@@ -96,4 +96,4 @@ def logout():
 
 
 if __name__ == '__main__':
-    app.run(ssl_context=('/home/richard/certificates/server.cert', '/home/richard/certificates/server.key'))
+    app.run(debug=True, ssl_context=('/home/richard/certs/server.crt', '/home/richard/certs/server.key'))

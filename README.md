@@ -47,10 +47,24 @@ SENDGRID_USER and SENDGRID_KEY
 `python`  
 `>>> from latersend import init_db`  
 `>>> init_db()`  
-* create development certificate and key to serve on https  
-`python`  
-`>>> from werkzeug import serving`  
-`>>> serving.make_ssl_devcert(base_path='<path>',host='<host_name>')`  
+* create development certificate and key to serve on https (more info at [akadia.com](https://www.akadia.com/services/ssh_test_certificate.html))
+
+    generate a private key
+
+        openssl genrsa -des3 -out server.key 1024
+
+    generate a CSR
+
+        openssl req -new -key server.key -out server.csr
+
+    remove passphrase from key
+
+        cp server.key server.key.org
+        openssl rsa -in server.key.org -out server.key
+
+    generate a self signed certificate
+
+        openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 
 
 
