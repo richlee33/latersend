@@ -47,13 +47,13 @@ SENDGRID_USER and SENDGRID_KEY
 `python`  
 `>>> from latersend import db`  
 `>>> db.create_all()`
-* create a test user
+* create a test user   
 `>>> from latersend import create_user`     
 `>>> create_user()`
- * get access token
+ * get access token   
 `>>> import requests, json`     
-`>>> r = requests.post('https://127.0.0.1:5000/login', data=json.dumps({'email':'test@example.com', 'password':'test123'}), headers={'content-type': 'application/json'}, verify=False)`
-`>>> r.content`
+`>>> r = requests.post('https://127.0.0.1:5000/login', data=json.dumps({'email':'test@example.com', 'password':'test123'}), headers={'content-type': 'application/json'}, verify=False)`   
+`>>> r.content`    
 ` copy "authentication_token" value
 * create development certificate and key to serve on https (more info at [akadia.com](https://www.akadia.com/services/ssh_test_certificate.html))
 
